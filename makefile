@@ -6,12 +6,14 @@ BIN_DIR = ./build
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
 OBJ_FILES = $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC_FILES))
 
-all: build_folders $(OBJ_FILES)
+all: alumnos doc
+
+alumnos: build_folders $(OBJ_FILES)
 	@echo Building aplication
 	@gcc $(OBJ_FILES) -o $(BIN_DIR)/app.out
 
 doc: 
-	@echo Building doc
+	@echo Building documentation
 	@doxygen
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c

@@ -1,11 +1,15 @@
-/*=====[Module Name]===========================================================
- * Copyright 2019 Esteban Daniel VOLENTINI <evolentini@gmail.com>
- * All rights reserved.
- * License: BSD-3-Clause <https://opensource.org/licenses/BSD-3-Clause>)
- *
- * Version: 0.1.0
- * Creation Date: 2019/03/01
+/** 
+ * @file alumnos.h
+ * @author Esteban Daniel VOLENTINI <evolentini@gmail.com>
+ * @brief Funciones de utilidad para serializar nombres de alumnos
+ * @version 0.1.0
+ * @date 2019/03/01
+ * @license: BSD-3-Clause <https://opensource.org/licenses/BSD-3-Clause> 
+ * @copyright Copyright 2019. All rights reserved
+ * 
  */
+
+/*=====[Module Name]===========================================================
 
 /*=====[Avoid multiple inclusion - begin]====================================*/
 
@@ -51,10 +55,17 @@ typedef struct alumno_s {
  * @param[out]  cadena      Puntero a la cadena de caracteres
  * @param[in]   espacio     Espacio disponible en la cadena de caracteres
  * @param[in]   alumno      Puntero a la esctructura con los datos del alumno
- * @return                  Indica si se pudo serializar correctamente los datos
+ * @return                  Indica si se pudieron serializar correctamente los datos
  */
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
+/**
+ * @brief Serializa los datos de todos los alumnos en una cadena JSON
+ * 
+ * @param[out]  cadena      Puntero a la cadena de caracteres 
+ * @param[in]   espacio     Espacio disponible en la cadena de caracteres
+ * @return                  Indica si se pudieron serializar correctamente los datos
+ */
 bool SerializarAlumnos(char * cadena, size_t espacio);
 
 /*=====[Prototypes (declarations) of public interrupt functions]=============*/

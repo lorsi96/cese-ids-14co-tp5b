@@ -1,12 +1,16 @@
-/*=====[Module Name]===========================================================
- * Copyright 2019 Esteban Daniel VOLENTINI <evolentini@gmail.com>
- * All rights reserved.
- * License: BSD-3-Clause <https://opensource.org/licenses/BSD-3-Clause>)
- *
- * Version: 0.1.0
- * Creation Date: 2019/03/01
+/** 
+ * @file alumnos.c
+ * @author Esteban Daniel VOLENTINI <evolentini@gmail.com>
+ * @brief Funciones de utilidad para serializar nombres de alumnos
+ * @version 0.1.0
+ * @date 2019/03/01
+ * @license: BSD-3-Clause <https://opensource.org/licenses/BSD-3-Clause> 
+ * @copyright Copyright 2019. All rights reserved
+ * 
  */
- 
+
+/*=====[Module Name]===========================================================
+
 /*=====[Inclusion of own header]=============================================*/
 
 #include "alumnos.h"
@@ -31,6 +35,7 @@ static const struct alumno_s ESTEBAN_VOLENTINI = {
     .documento = "23.517.968",
 };
 
+//! Constante con los datos del alumno Lucas Orsi.
 static const struct alumno_s LUCAS_ORSI = {
     .apellidos = "ORSI",
     .nombres = "Lucas",
