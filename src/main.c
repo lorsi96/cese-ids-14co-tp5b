@@ -1,15 +1,11 @@
-/** 
- * @file alumnos.c
- * @author Esteban Daniel VOLENTINI <evolentini@gmail.com>
- * @brief Imprime el nombre, apellido y nro. de documento de los alumnos registrados
- * @version 0.1.0
- * @date 2019/03/01
- * @license: BSD-3-Clause <https://opensource.org/licenses/BSD-3-Clause> 
- * @copyright Copyright 2019. All rights reserved
- * 
- */
-
 /*=====[Module Name]===========================================================
+ * Copyright 2019 Esteban Daniel VOLENTINI <evolentini@gmail.com>
+ * All rights reserved.
+ * License: BSD-3-Clause <https://opensource.org/licenses/BSD-3-Clause>)
+ *
+ * Version: 0.1.0
+ * Creation Date: 2019/03/01
+ */
  
 /*=====[Inclusion of own header]=============================================*/
 
@@ -19,8 +15,6 @@
 /*=====[Inclusions of private function dependencies]=========================*/
 
 /*=====[Definition macros of private constants]==============================*/
-
-#define BUFFER_LEN 2048 //!< Longitud del buffer de alumnos
 
 /*=====[Private function-like macros]========================================*/
 
@@ -41,7 +35,7 @@
 /*=====[Implementations of private functions]================================*/
 
 int main(int argc, char *argv[]) {
-    const char cadena[BUFFER_LEN]; //!< Buffer en el que se guardan los alumnos.
+    char cadena[2048];
 
     if (SerializarAlumnos(cadena, sizeof(cadena))) {
         printf("Listado total de alumnos: %s\r\n", cadena);
