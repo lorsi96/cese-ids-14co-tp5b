@@ -29,16 +29,30 @@ extern "C" {
 
 /*=====[Definitions of public data types]====================================*/
 
+//! Estructura de datos para almacenar la informacion de un alumno
 typedef struct alumno_s {
-    char apellidos[30];
-    char nombres[30];
-    char documento[11];
+    char apellidos[30];     //!< Contiene el apellido del alumno
+    char nombres[30];       //!< Contiene el nombre del alumno
+    char documento[11];     //! < Contiene el documento del alumno
 } const * alumno_t;
 
 /*=====[Definitions of public global variables]==============================*/
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
 
+/**
+ * @brief Serializa los datos de un alumno en una cadena JSON
+ * 
+ * Esta funcion se utiliza para convertir los datos estructurados en memoria
+ * en una cadena de texto que pueda ser transmitida por un puerto de comunicaciones
+ * Se utiliza el formato JSON proveniente de JavaScript y muy difundido en las
+ * aplicaciones WEB
+ * 
+ * @param[out]  cadena      Puntero a la cadena de caracteres
+ * @param[in]   espacio     Espacio disponible en la cadena de caracteres
+ * @param[in]   alumno      Puntero a la esctructura con los datos del alumno
+ * @return                  Indica si se pudo serializar correctamente los datos
+ */
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
 bool SerializarAlumnos(char * cadena, size_t espacio);
